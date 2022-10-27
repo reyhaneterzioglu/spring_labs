@@ -16,11 +16,12 @@ public class ProductServiceImpl implements ProductService {
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
+
     @Override
-    public boolean productCreate(Product product){
+    public boolean productCreate(Product product) {
         product.setId(UUID.randomUUID());
-        product.setQuantity(1); // ?? product.getRemainingQuantity()
-        return true;
+        product.setQuantity(1); // ?
+        return productRepository.save(product);
     }
 
 
@@ -30,8 +31,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product findProductById(UUID uuid){
-       return productRepository.findProductById(uuid);
+    public Product findProductById(UUID uuid) {
+        return productRepository.findProductById(uuid);
     }
 
 }

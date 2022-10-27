@@ -20,8 +20,7 @@ public class CartController {
     public String showCard(Model model) {
 
         model.addAttribute("cart", CartServiceImpl.CART);
-//        model.addAttribute("cartItemList", CartServiceImpl.CART.getCartItemList());
-//        model.addAttribute("cartTotalAmount", CartServiceImpl.CART.getCartTotalAmount());
+
         return "cart/show-cart";
     }
 

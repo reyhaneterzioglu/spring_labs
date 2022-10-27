@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.UUID;
 
 @Service
@@ -21,8 +22,10 @@ public class CartServiceImpl implements CartService {
         this.productService = productService;
     }
 
+
     @Override
     public Cart addToCart(UUID productId, Integer quantity) {
+
         // todo retrieve product from repository method
         // todo initialise cart item
         // todo calculate cart total amount

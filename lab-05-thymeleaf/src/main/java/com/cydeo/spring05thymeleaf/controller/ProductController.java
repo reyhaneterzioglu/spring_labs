@@ -31,7 +31,6 @@ public class ProductController {
     public String addProduct(@ModelAttribute("product") Product product) {
 
         productService.productCreate(product);
-        productRepository.save(product);
 
         return "redirect:/list";
     }
